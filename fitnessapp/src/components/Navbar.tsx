@@ -1,23 +1,19 @@
-import {
-  Container,
-  Nav,
-  Navbar as NavbarBS,
-} from "../../node_modules/react-bootstrap/esm/index";
+import { Container } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
-const Navbar = () => {
+const NavbarBs = () => {
   return (
-    <NavbarBS
-      className="justify content-start"
-      sticky="top"
-      bg="light"
-      variant="light"
-    >
+    <Navbar bg="dark" sticky="top" variant="dark" expand="lg">
       <Container>
-        <Nav.Link to={"/"}>Home</Nav.Link>
-        <Nav.Link to={"/about"}>About</Nav.Link>
+        <Nav className="me-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#schedule">Schedule</Nav.Link>
+          <Nav.Link href="#exercises">Exercises</Nav.Link>
+        </Nav>
       </Container>
-    </NavbarBS>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavbarBs;
